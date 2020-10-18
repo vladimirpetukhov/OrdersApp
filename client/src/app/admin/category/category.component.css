@@ -1,0 +1,32 @@
+.table-category tbody td{
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.table-category tbody td i {
+  cursor: pointer;
+}
+
+.table-category tbody td i:hover {
+  opacity: 0.5;
+}
+
+.fa-edit::before{
+  color: blue;
+}
+
+.fa-save::before{
+  color: green;
+}
+
+.fa-trash::before{
+  color: red;
+}
+
+.category div label input {
+  width: 100%;
+}
+
+.category div label  {
+  width: 100%;
+}

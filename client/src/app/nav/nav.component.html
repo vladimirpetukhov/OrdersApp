@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-md mb-5 justify-content-center">
+  <div class="container m-2 col-12">
+    <!-- <a class="navbar-brand" [routerLink]="['/home']"><img src="../../assets/index.jpg"></a> -->
+
+    <ul *ngIf="loggedIn()" class="navbar-nav mr-auto ml-5">
+
+      <li *appHasRole="['Admin', 'Moderator']" class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/orders']">Orders</a>
+      </li>
+      <li *appHasRole="['Admin', 'Moderator']" class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/products']">Products</a>
+      </li>
+
+    </ul>
+
+    <div *ngIf="loggedIn()" class="dropdown" dropdown>
+      <span class="mr-1">
+        <img src="{{photoUrl || '../../assets/user.png'}}" alt="">
+      </span>
+      <a class="dropdown-toggle text-light" dropdownToggle>
+        Welcome {{authService.decodedToken?.unique_name | titlecase}}
+      </a>
+
+      <div class="dropdown-menu mt-3" *dropdownMenu>
+        <a class="dropdown-item" [routerLink]="['/member/edit']">
+          <i class="fa fa-user"></i> Edit Profile</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" (click)="logout()">
+          <i class="fa fa-sign-out"></i> Logout</a>
+      </div>
+    </div>
+
+    <ul *ngIf="!loggedIn()" class="navbar-nav  ml-5">
+
+      <li  class="nav-item" routerLinkActive="active" >
+        <a class="nav-link" [routerLink]="['/register']">Sign Up</a>
+      </li>
+      <li  class="nav-item" routerLinkActive="active" >
+        <a class="nav-link" [routerLink]="['/login']">Sign In</a>
+      </li>
+    </ul>
+
+
+
+  </div>
+
+
+</nav>

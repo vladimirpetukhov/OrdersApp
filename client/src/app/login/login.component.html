@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 p-2 login">
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Username:</label>
+                  <input type="text" class="form-control" formControlName="username">
+                </div>
+                <div class="alert alert-danger" *ngIf="username.touched && username.errors?.required">
+                    This is mantadory bro...
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password:</label>
+                  <input type="password" class="form-control" formControlName="password">
+                </div>
+                <div class="alert alert-danger" *ngIf="password.touched && password.errors?.required">
+                  This is mantadory bro...
+                </div>
+                <div class="uk-button-group col-12 d-flex justify-content-center mt-4 p-0">
+                <button type="submit" class="btn btn-sm btn-success mr-2">Login</button>
+                <button type="reset" class="btn btn-sm btn-primary">Cansel</button>
+                </div>
+
+              </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+.dropdown-toggle, .dropdown-item {
+  cursor: pointer;
+}
+
+.navbar {
+  box-shadow: 0 4px 8px 0 rgba(67, 184, 87, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  background: black;
+  color: #0f0;
+  width: 100%;
+  z-index: 150;
+}
+
+.navbar .nav-link {
+  cursor: pointer;
+  color: #0f0;
+}
+.navbar .nav-link:hover {
+  cursor: pointer;
+  color: rgb(255, 136, 0);
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='RGBA(153,190,70,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #0f0;
+}
+
+.navbar-brand img{
+  margin-left: 15%;
+  min-width: 110px;
+  max-width: 150px;
+}
+
+.navbar-brand{
+  width: 100px;
+  max-height: 100px;
+}
+
+div .dropdown img{
+  width: 50px;
+  height: 50px;
+}

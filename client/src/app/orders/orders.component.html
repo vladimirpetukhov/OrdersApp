@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 m-0 p-0">
+      <h2>Orders</h2>
+      <hr class="">
+    </div>
+    <div class="col-12">
+      <button class="btn btn-lg btn-outline-success" type="button" style="float: right;">ADD NEW</button>
+    </div>
+  </div>
+</div>
+<div class="container mt-5">
+  <div class="row">
+    <div  class="col-sm-6 col-md-4 col-lg-4 col-xl-2">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Total Price</th>
+            <th>Number</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let order of orders" >
+          <tr>
+            <td>{{order.totalPrice}}</td>
+            <td>{{order.orderNumber}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  <div class="d-flex justify-content-center">
+    <pagination [boundaryLinks]="true" [totalItems]="pagination.totalItems" [itemsPerPage]="pagination.itemsPerPage" [(ngModel)]="pagination.currentPage"
+      (pageChanged)="pageChanged($event)" previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"
+      >
+    </pagination>
+  </div>
+</div>

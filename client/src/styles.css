@@ -1,0 +1,105 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../node_modules/bootswatch/dist/united/bootstrap.min.css';
+@import '../node_modules/font-awesome/css/font-awesome.min.css';
+@import '../node_modules/alertifyjs/build/css/alertify.css';
+@import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
+@import '../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css';
+
+body{
+  font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+  color: #0f0;
+  background-color: #000;
+}
+
+label, a, span, select, input, button{
+  color: #0f0;
+}
+
+hr{
+  border: 1px dashed #0f0;
+
+}
+table.dataTable{
+  border-color: #0f0;
+  border: 1px dashed;
+}
+.form-control{
+  border: 2px solid #0f0;
+  background-color: #333333;
+  color: #a6a6a6;
+}
+
+.form-control:focus{
+  border: 2px solid rgb(7, 9, 110);
+  background-color: black;
+  color: #0f0;
+}
+
+.tab-panel {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+  }
+
+  .nav-tabs > li.open, .member-tabset > .nav-tabs > li:hover {
+    border-bottom: 4px solid #fbcdcf;
+  }
+
+  .member-tabset > .nav-tabs > li.open > a, .member-tabset > .nav-tabs > li:hover > a {
+    border: 0;
+    background: none !important;
+    color: #333333;
+  }
+
+  .member-tabset > .nav-tabs > li.open > a > i, .member-tabset > .nav-tabs > li:hover > a > i {
+    color: #a6a6a6;
+  }
+
+  .member-tabset > .nav-tabs > li.open .dropdown-menu, .member-tabset > .nav-tabs > li:hover .dropdown-menu {
+    margin-top: 0px;
+  }
+
+  .member-tabset > .nav-tabs > li.active {
+    border-bottom: 4px solid #E95420;
+    position: relative;
+  }
+
+  .member-tabset > .nav-tabs > li.active > a {
+    border: 0 !important;
+    color: #333333;
+  }
+
+  .member-tabset > .nav-tabs > li.active > a > i {
+    color: #404040;
+  }
+
+  .member-tabset > .tab-content {
+    margin-top: -3px;
+    background-color: #fff;
+    border: 0;
+    border-top: 1px solid #eee;
+    padding: 15px 0;
+  }
+
+  .alert-danger{
+    background: none;
+    border: none;
+    color: red;
+
+  }
+
+  .modal-content{
+    box-shadow: 0 4px 8px 0 rgba(67, 184, 87, 0.2), 0 6px 20px 0 rgba(67, 184, 87, 0.2);
+    background-color: #000;
+  }
+
+  .modal-header{
+    background-color: rgb(6, 94, 6);
+    color: white;
+    padding: 2px;
+  }
+
+  .modal-title{
+    font-size: 16px;
+  }
